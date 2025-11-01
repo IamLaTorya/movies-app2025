@@ -4,7 +4,13 @@ const router = express.Router()
 //http://localhost:3001
 router.get('/', (req, res)=>
 {
-    res.send('it is working...')
+   // res.send('it is working...')
+    //this displays the home page
+    res.render('pages/home', 
+    {
+        title: "LaTorya's Movies App",
+        name: "LaTorya's Movies App"
+    })
 })
 
 router.use('/movies', require('./api/moviesRoutes'))
